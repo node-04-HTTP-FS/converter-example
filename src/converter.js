@@ -1,8 +1,8 @@
-const KG_IBS_MULTI = 2.2046;
+const KG_LBS_MULTI = 2.2046;
 
-const converter = (to, value) => {
-    if(to === 'kg') return value / KG_IBS_MULTI;
-    if(to === 'ibs') return value * KG_IBS_MULTI;
+const converter = (value, to) => {
+    if(to === 'lbs') return value * KG_LBS_MULTI;
+    if(to === 'kg') return value / KG_LBS_MULTI;
 
     return 0;
 }

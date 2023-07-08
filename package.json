@@ -1,12 +1,27 @@
 {
   "name": "practice",
   "version": "1.0.0",
-  "description": "converter",
+  "description": "converter kg to lbs",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softserve-nodejs-course-tasks/converter-example.git"
+  },
+  "keywords": [
+    "nodejs",
+    "fs",
+    "http",
+    "url",
+    "modules"
+  ],
   "author": "Nick Sotula",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/softserve-nodejs-course-tasks/converter-example/issues"
+  },
+  "homepage": "https://github.com/softserve-nodejs-course-tasks/converter-example#readme"
 }

@@ -1,24 +1,23 @@
 const fs = require('fs');
-const F_NAME = 'log.txt';
+const FNAME = 'log.txt';
 
-const w = (pathname, query, answer, status) => {
-    const queries = Object.entries(query)
-        .reduce((acc, [key, val])=>`${ acc } ${ key }:${ val },`, '');
-    const logRecord = `${ pathname } -- arguments:${ queries } -- ${ status } -- ${ answer }`;
+const w = (pathname, query, status, respText) => {
+    const queryStr = Object.entries(query).reduce((acc, [key, val]) => `${ acc }${ key }=${ val }, `, '');
+
     const now = Date.now();
-    const wText = `${ now } :: ${ logRecord }\n`;
+    if(pathname === '/logs') respText = 'logs';
+    const logStr = `${ now } IN: ${ pathname }  {${ queryStr }} OUT: ${ status }  ${ respText }\n`;
 
-    fs.appendFile(F_NAME, wText, (err) => {
+    const appFileCBack = (err) => {
         if(err) throw err;
-        console.log('ADD LOG --> ', wText);
-    });
+        console.log(logStr);
+    }
+
+    fs.appendFile(FNAME, logStr, appFileCBack);
 }
 
-const r = (cback) => {
-    fs.readFile(F_NAME, (err, data) => {
-        if(err) throw err;
-        cback(data);
-    });
+const r = () => {
+    return fs.promises.readFile(FNAME).then(d => d);
 }
 
 module.exports = { w, r };

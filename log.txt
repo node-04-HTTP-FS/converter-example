@@ -1,9 +1,4 @@
-1688815574782 :: /converter -- ibs -- 35 -- 77.161
-1688815585243 :: /converter -- eee -- 35 -- 0
-1688815911704 :: /converter -- , to:eee, value:35 -- 200 -- 0
-1688815918168 :: /converter -- , to:kg, value:35 -- 200 -- 15.875895854123197
-1688815951124 :: /logs --  -- 400 -- idk
-1688816003853 :: /converter -- arguments: to:kg, value:35, -- 200 -- 15.875895854123197
-1688816146641 :: /converter -- arguments: to:kg, value:35, -- 200 -- 15.875895854123197
-1688816613997 :: /converter -- arguments: to:kg, value:35, -- 200 -- 15.875895854123197
-1688816646073 :: /logs -- arguments: -- 200 -- idk
+1688827025575 IN: /converter  {value=100, to=lbs, } OUT: 200  220.46
+1688827029054 IN: /converter  {value=33, to=lbs, } OUT: 200  72.7518
+1688827032535 IN: /logs  {} OUT: 200  logs
+1688827039901 IN: /logs  {} OUT: 200  logs
